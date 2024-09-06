@@ -3,7 +3,7 @@ import { viteBundler } from "@vuepress/bundler-vite";
 import { plumeTheme } from "vuepress-theme-plume";
 
 export default defineUserConfig({
-  base: "/jackpanger.github.io/",
+  base: "/",
   lang: "en-US",
   locales: {
     "/": {
