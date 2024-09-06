@@ -1,0 +1,22 @@
+{
+  "name": "personal-blog",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Personal blog",
+  "author": "Jack Pang <jp6862@nyu.edu>",
+  "license": "MIT",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:dev-clean": "vuepress dev docs --clean-cache --clean-temp",
+    "docs:build": "vuepress build docs --clean-cache --clean-temp",
+    "docs:preview": "http-server docs/.vuepress/dist",
+    "vp-update": "vp-update"
+  },
+  "devDependencies": {
+    "vuepress": "2.0.0-rc.15",
+    "vuepress-theme-plume": "1.0.0-rc.96",
+    "@vuepress/bundler-vite": "2.0.0-rc.15",
+    "http-server": "^14.1.1",
+    "vue": "^3.5.3"
+  }
+}
