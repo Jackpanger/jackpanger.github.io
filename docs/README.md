@@ -2,21 +2,18 @@
 pageLayout: home
 externalLinkIcon: false
 config:
-  -
-    type: hero
+  - type: hero
     full: true
     background: tint-plate
     hero:
-      name: Theme Plume
+      name: Phoat
       tagline: VuePress Next Theme
       text: A simple, feature-rich, document & blog
       actions:
-        -
-          theme: brand
+        - theme: brand
           text: Blog
-          link: /blog/
-        -
-          theme: alt
+          link: /nav/
+        - theme: alt
           text: Github →
-          link: https://github.com/pengzhanbo/vuepress-theme-plume
+          link: https://github.com/Jackpanger/phoat-press-plume
 ---
