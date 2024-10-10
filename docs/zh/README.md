@@ -12,7 +12,7 @@ config:
       actions:
         - theme: brand
           text: 进入博客
-          link: /zh/nav/
+          link: /zh/guide/intro/
         - theme: alt
           text: Github →
           link: https://github.com/Jackpanger/phoat-press-plume
