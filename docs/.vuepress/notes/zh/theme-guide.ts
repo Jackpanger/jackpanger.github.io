@@ -36,13 +36,13 @@ export const themeGuide = defineNoteConfig({
           collapsed: true,
           items: ["mexico"],
         },
-        // {
-        //   text: "代码块",
-        //   prefix: "代码",
-        //   icon: "ph:code-bold",
-        //   collapsed: true,
-        //   items: ["介绍", "特性支持", "代码组", "导入代码", "twoslash"],
-        // },
+        {
+          text: "墨西哥签证",
+          prefix: "visa/mexicovisa",
+          icon: "ph:code-bold",
+          collapsed: true,
+          items: ["mexico_visa"],
+        },
         // {
         //   text: "代码演示",
         //   prefix: "代码演示",

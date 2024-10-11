@@ -7,26 +7,30 @@ tags:
   - Quick Start
 ---
 
-> 这是一个导航页面，方便大家快速进入相关页面。
+> This is a navigation page to help everyone quickly access relevant pages.
 >
-> 作者: phoat
+> Author: phoat
 >
-> 本站地址: [https://jackpanger.github.io/](https://jackpanger.github.io/)
+> Website: [https://jackpanger.github.io/](https://jackpanger.github.io/)
 
-::: details 不了解 phoat ？
+::: details Not familiar with Phoat?
 
-Phoat 是小胖和小锅的共同称谓，这个网站作为博客和笔记充当了这两位社恐人士的朋友圈。
+Phoat is the combined nickname of Little Chubby and Little Pot. This website serves as a blog and journal, acting as the social circle for these two socially anxious individuals.
 :::
 
-## 博客内容
+## Blog Content
 
-目前博客分为以下几个模块，可根据需求查看需要的信息。
+The blog is currently divided into the following sections, where you can find the information you need based on your interests.
 
-### 签证相关
+### Visa-related Information
 
-**美签**
+**US visa**
 
-- [墨西哥续签 F1](./visa/usvisa/mexico.md)
+- [Renew F1 visa in Mexico](./visa/usvisa/mexico.md)
+
+**Mexico visa**
+
+- [Visitor visa](./visa/mexicovisa/mexico_visa.md)
 
 <!--  [威联通 nas](./nas.md)
 
