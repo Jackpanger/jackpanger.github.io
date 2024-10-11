@@ -8,7 +8,14 @@ tags:
 ---
 
 ::: tip 为什么要去墨西哥续签？
-去墨西哥 check 的概率更小，大概率可以通过 Auto Revalidation 回美国等待，不耽误正常工作
+去墨西哥 check 的概率更小，大概率可以通过 [Auto Revalidation](#面签) 回美国等待，不耽误正常工作
+:::
+::: note
+
+==注意右上角文章编辑时间，政策可能会有所更改。==
+
+墨西哥办理签证通常适合**续签**而不是**首次**办理签证，这篇文章主要为 F1 签证并不打算回国续签的同学提供参考。如为其他情况，建议参考大使馆相关文件。
+
 :::
 
 <!-- more -->
@@ -48,10 +55,6 @@ tags:
 ::::
 
 ## 美签流程
-
-::: note
-墨西哥办理签证通常适合**续签**而不是**首次**办理签证，这篇文章主要为 F1 签证并不打算回国续签的同学提供参考。如为其他情况，建议参考大使馆相关文件。
-:::
 
 :::: steps
 
@@ -134,8 +137,8 @@ tags:
    4. 也是有门卫的，有点像公寓的性质。
 
       ::: center
-      <img src="/visa/mexico-dorm-lilian1.webp" width="300">
-      <img src="/visa/mexico-dorm-lilian2.webp" width="300">
+      <img src="/visa/mexico-dorm-lilian1.png" width="300">
+      <img src="/visa/mexico-dorm-lilian2.png" width="300">
       :::
 
 ::: tip
