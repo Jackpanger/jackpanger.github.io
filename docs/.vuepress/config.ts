@@ -22,7 +22,7 @@ export default defineUserConfig({
 
   theme: plumeTheme({
     // 添加您的部署域名
-    // hostname: 'https://your_site_url',
+    hostname: "https://jackpanger.github.io/",
     notes: {
       // 声明所有笔记的目录，(默认配置，通常您不需要声明它)
       dir: "/notes/",
