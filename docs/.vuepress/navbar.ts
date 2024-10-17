@@ -3,12 +3,12 @@ import { defineNavbarConfig } from "vuepress-theme-plume";
 export const enNavbar = defineNavbarConfig([
   { text: "Home", link: "/" },
   { text: "Blog", link: "/blog/" },
-  { text: "Guide", link: "/notes/guide/README.md" },
+  { text: "Guide", link: "/notes/guide/intro.md" },
   { text: "Tags", link: "/blog/tags/" },
   { text: "Archives", link: "/blog/archives/" },
   {
     text: "Notes",
-    items: [{ text: "Guide", link: "/notes/guide/README.md" }],
+    items: [{ text: "Quick Start", link: "/notes/guide/intro.md" }],
   },
 ]);
 

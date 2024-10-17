@@ -1,7 +1,5 @@
 ---
-title: nas
+title: NAS
 createTime: 2024/09/06 17:24:30
-permalink: /guide/dsp0c5ii/
+permalink: /guide/nas/
 ---
-
-[nas](./nas.md)

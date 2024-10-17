@@ -52,10 +52,12 @@ export default defineUserConfig({
        * Shiki 代码高亮
        * @see https://theme-plume.vuejs.press/config/plugins/code-highlight/
        */
-      // shiki: {
-      //   languages: ['shell', 'bash', 'typescript', 'javascript'],
-      //   twoslash: true,
-      // },
+      shiki: {
+        // languages: ['shell', 'bash', 'typescript', 'javascript'],
+        languages: ["java", "html", "css", "typescript", "javascript"],
+
+        //   twoslash: true,
+      },
 
       /**
        * markdown enhance
@@ -74,23 +76,23 @@ export default defineUserConfig({
        *  markdown power
        * @see https://theme-plume.vuejs.press/config/plugin/markdown-power/
        */
-      // markdownPower: {
-      //   pdf: true,
-      //   caniuse: true,
-      //   plot: true,
-      //   bilibili: true,
-      //   youtube: true,
-      //   icons: true,
-      //   codepen: true,
-      //   replit: true,
-      //   codeSandbox: true,
-      //   jsfiddle: true,
-      //   repl: {
-      //     go: true,
-      //     rust: true,
-      //     kotlin: true,
-      //   },
-      // },
+      markdownPower: {
+        //   pdf: true,
+        //   caniuse: true,
+        //   plot: true,
+        //   bilibili: true,
+        //   youtube: true,
+        icons: true,
+        //   codepen: true,
+        //   replit: true,
+        //   codeSandbox: true,
+        //   jsfiddle: true,
+        //   repl: {
+        //     go: true,
+        //     rust: true,
+        //     kotlin: true,
+        //   },
+      },
 
       /**
        * comments
@@ -106,6 +108,11 @@ export default defineUserConfig({
       //   reactionsEnabled: true,
       //   inputPosition: 'top',
       // },
+    },
+    encrypt: {
+      rules: {
+        "/guide/coding/amazon/": "123456",
+      },
     },
   }),
 });

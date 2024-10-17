@@ -12,7 +12,7 @@ config:
       actions:
         - theme: brand
           text: Blog
-          link: /guide/
+          link: /guide/intro/
         - theme: alt
           text: Github →
           link: https://github.com/Jackpanger/phoat-press-plume

@@ -32,6 +32,10 @@ The blog is currently divided into the following sections, where you can find th
 
 - [Visitor visa](./visa/mexicovisa/mexico_visa.md)
 
+### Job-related Information
+
+- [Coding](./coding/intro.md)
+
 <!--  [威联通 nas](./nas.md)
 
 [小红书相关](red_book.md) -->
