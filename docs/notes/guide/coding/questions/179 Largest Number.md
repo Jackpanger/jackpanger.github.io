@@ -30,47 +30,18 @@ _Constraints:_
 ::: details Solution
 There are several things to note:
 
-1. This is a typical DFS (Depth-First Search) problem. We can use a graph to represent the relationships between prerequisites and traverse the nodes to check if we encounter the root again. If the root is visited again during the traversal, it indicates a cycle, meaning the requirements cannot be fulfilled.
-2. Use different numbers to indicate whether a node has been visited or not.
-   ::: code-tabs
-   @tab java
-
 ```java
-boolean res = true;
-List<List<Integer>> graph;
-int[] visited;
-
-public boolean canFinish(int numCourses, int[][] prerequisites) {
-    graph = new ArrayList<>();
-    visited = new int[numCourses];
-    for (int i = 0; i < numCourses; i++) {
-        graph.add(new ArrayList<>());
+public String largestNumber(int[] nums) {
+    PriorityQueue<String> pq = new PriorityQueue<>((o1, o2) -> (o2 + o1).compareTo(o1 + o2));
+    for (int num : nums) {
+        pq.add(String.valueOf(num));
     }
-    for (int[] prerequisite : prerequisites) {
-        graph.get(prerequisite[1]).add(prerequisite[0]);
+    StringBuilder sb = new StringBuilder();
+    while (!pq.isEmpty()) {
+        sb.append(pq.poll());
     }
-    for (int i = 0; i < numCourses && res; i++) {
-        if (visited[i] == 0) {
-            dfs(i);
-        }
-    }
-    return res;
-}
-
-private void dfs(int i) {
-    visited[i] = 1;
-    for (int j : graph.get(i)) {
-        if (visited[j] == 0) {
-            dfs(j);
-            if (!res) {
-                return;
-            }
-        } else if (visited[j] == 1) {
-            res = false;
-            return;
-        }
-    }
-    visited[i] = 2;
+    while (sb.charAt(0) == '0' && sb.length() > 1) sb.deleteCharAt(0);
+    return sb.toString();
 }
 ```
 

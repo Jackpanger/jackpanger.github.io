@@ -89,13 +89,28 @@ export const themeGuide = defineNoteConfig({
       collapsed: false,
       items: [
         "intro",
-        "amazon",
-        "array",
-        "matrix",
-        "string",
-        "graph",
-        "greedy",
-        "heap",
+        "design",
+        {
+          text: "Company",
+          icon: "material-symbols:markdown-outline",
+
+          collapsed: true,
+          items: ["amazon"],
+        },
+        {
+          text: "Data Structure",
+          icon: "material-symbols:markdown-outline",
+
+          collapsed: true,
+          items: ["array", "matrix", "string", "heap", "tree", "graph"],
+        },
+        {
+          text: "Algorithm",
+          icon: "material-symbols:markdown-outline",
+
+          collapsed: true,
+          items: ["greedy"],
+        },
       ],
     },
     // {
