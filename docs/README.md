@@ -7,8 +7,8 @@ config:
     background: tint-plate
     hero:
       name: Phoat
-      tagline: VuePress Next Theme
-      text: A simple, feature-rich, document & blog
+      tagline: Reflection and Connection
+      text: Exploring thoughts, ideas, and creativity at our own pace.
       actions:
         - theme: brand
           text: Blog
