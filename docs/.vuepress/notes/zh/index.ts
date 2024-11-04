@@ -4,11 +4,11 @@ import { themeConfig } from "./theme-config";
 import { plugins } from "./plugins";
 import { tools } from "./tools";
 
-const zhDemoNote = defineNoteConfig({
-  dir: "guide",
-  link: "/guide",
-  sidebar: ["", "nas", "red_book"],
-});
+// const zhDemoNote = defineNoteConfig({
+//   dir: "guide",
+//   link: "/guide",
+//   sidebar: ["", "nas", "red_book"],
+// });
 export const zhNotes = defineNotesConfig({
   dir: "/zh/notes",
   link: "/",

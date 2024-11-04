@@ -8,7 +8,15 @@ export const enNavbar = defineNavbarConfig([
   { text: "Archives", link: "/blog/archives/" },
   {
     text: "Notes",
-    items: [{ text: "Quick Start", link: "/notes/guide/intro.md" }],
+    items: [
+      { text: "Quick Start", link: "/notes/guide/intro.md" },
+      { text: "NAS", link: "/notes/guide/nas/nas.md" },
+      {
+        text: "Technical Materials",
+        link: "/notes/guide/material/material.md",
+      },
+      { text: "Red Book", link: "/notes/guide/red_book/red_book.md" },
+    ],
   },
 ]);
 
