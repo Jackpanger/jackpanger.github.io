@@ -122,7 +122,7 @@ I usually choose Airbnb near the embassy. The prices are relatively high but off
 
    - Each unit is independent, equipped with a kitchen, utensils, and a bathroom. However, occasionally you might get unlucky with a slightly dirty pillow.
    ::: center
-   <img src="/visa/mexico-dorm.webp" width="500">
+   <img src="/images/visa/mexico-dorm.webp" width="500">
    :::
     <!-- ![mexico-dorm](/visa/mexico-dorm.webp) -->
 
@@ -136,8 +136,8 @@ I usually choose Airbnb near the embassy. The prices are relatively high but off
    4. There’s also a security guard, and the property feels a bit like an apartment.
 
       ::: center
-      <img src="/visa/mexico-dorm-lilian1.png" width="300">
-      <img src="/visa/mexico-dorm-lilian2.png" width="300">
+      <img src="/images/visa/mexico-dorm-lilian1.png" width="300">
+      <img src="/images/visa/mexico-dorm-lilian2.png" width="300">
       :::
 
 ::: tip

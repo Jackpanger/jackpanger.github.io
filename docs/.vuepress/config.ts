@@ -14,7 +14,8 @@ export default defineUserConfig({
     "/zh/": {
       title: "Phoat",
       lang: "zh-CN",
-      description: "Personal blog",
+      description:
+        "A safe space for introverted reflections and personal growth",
     },
   },
 

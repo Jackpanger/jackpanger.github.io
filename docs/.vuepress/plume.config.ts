@@ -13,16 +13,17 @@ export default defineThemeConfig({
 
   appearance: true,
 
-  social: [{ icon: "github", link: "/" }],
+  social: [{ icon: "github", link: "https://github.com/Jackpanger" }],
 
   locales: {
     "/": {
       profile: {
-        avatar: "https://theme-plume.vuejs.press/plume.png",
+        avatar: "https://avatars.githubusercontent.com/u/45305339?v=4",
         name: "Phoat Press",
-        description: "Personal blog",
-        // circle: true,
-        // location: '',
+        description:
+          "A safe space for introverted reflections and personal growth",
+        circle: true,
+        location: "Jersey City",
         // organization: '',
       },
 

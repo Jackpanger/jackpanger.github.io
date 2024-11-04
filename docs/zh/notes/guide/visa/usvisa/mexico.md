@@ -123,7 +123,7 @@ tags:
 
    - 独立房间，内有厨房餐具卫浴。但偶尔运气不好枕头会有点脏。
    ::: center
-   <img src="/visa/mexico-dorm.webp" width="500">
+   <img src="/images/visa/mexico-dorm.webp" width="500">
    :::
     <!-- ![mexico-dorm](/visa/mexico-dorm.webp) -->
 
@@ -137,8 +137,8 @@ tags:
    4. 也是有门卫的，有点像公寓的性质。
 
       ::: center
-      <img src="/visa/mexico-dorm-lilian1.png" width="300">
-      <img src="/visa/mexico-dorm-lilian2.png" width="300">
+      <img src="/images/visa/mexico-dorm-lilian1.png" width="300">
+      <img src="/images/visa/mexico-dorm-lilian2.png" width="300">
       :::
 
 ::: tip
