@@ -4,9 +4,12 @@ externalLinkIcon: false
 config:
   - type: banner
     # full: true
-    banner: images/pexels-stywo-1261728.jpg
+    banner: images/homepage.jpg
     # tint-plate
     # tintPlate: 210
+    bannerMask:
+      light: 0.1
+      dark: 0.3
     hero:
       name: Phoat
       tagline: Reflection and Connection
@@ -20,9 +23,6 @@ config:
           link: https://github.com/Jackpanger/phoat-press-plume
   - type: hero
     full: false
-    # background: pexels-stywo-1261728.jpg
-    # tint-plate
-    # tintPlate: 210
     hero:
       name: Quick Navigation
       tagline: See a series of articles?
