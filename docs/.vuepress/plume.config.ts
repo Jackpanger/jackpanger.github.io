@@ -32,7 +32,7 @@ export default defineThemeConfig({
     },
     "/zh/": {
       profile: {
-        avatar: "https://theme-plume.vuejs.press/plume.png",
+        avatar: "https://avatars.githubusercontent.com/u/45305339?v=4",
         name: "Phoat Press",
         description: "个人博客",
         // circle: true,

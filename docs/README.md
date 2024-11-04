@@ -8,8 +8,8 @@ config:
     # tint-plate
     # tintPlate: 210
     bannerMask:
-      light: 0.1
-      dark: 0.3
+      light: 0.0
+      dark: 0.1
     hero:
       name: Phoat
       tagline: Reflection and Connection
