@@ -3,10 +3,7 @@ pageLayout: home
 externalLinkIcon: false
 config:
   - type: banner
-    # full: true
     banner: images/homepage.jpg
-    # tint-plate
-    # tintPlate: 210
     bannerMask:
       light: 0.0
       dark: 0.1
