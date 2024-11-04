@@ -21,7 +21,7 @@ Determine the minimum number of trips required to deliver the packages. If it is
 packageweight = [2, 4, 6, 6, 4, 2, 4]
 
 The agent needs a minimum of 3 trips as shown below. Return 3 as the answer.
-<img src="/coding/amazon/question1.png" >
+<img src="/images/coding/amazon/question1.png" >
 :::
 ::: details Solution
 There are several things to note:
