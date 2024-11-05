@@ -94,7 +94,7 @@ export const themeGuide = defineNoteConfig({
           icon: "mdi:api",
           collapsed: false,
           prefix: "three-js",
-          items: ["basic", "operation"],
+          items: ["basic", "operation", "geometry", "materials"],
         },
       ],
     },
