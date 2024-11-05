@@ -15,7 +15,7 @@ export const themeGuide = defineNoteConfig({
         "intro",
         // "nas",
         // "red_book",
-        // "material",
+        "material/material",
         // '介绍',
         // '安装与使用',
         // '博客',
@@ -84,19 +84,27 @@ export const themeGuide = defineNoteConfig({
       items: ["nas", "ddns-go"],
     },
     {
-        text: "Material",
-        icon: "material-symbols:dashboard-customize-outline-rounded",
-        collapsed: false,
-        prefix: "material",
-        items: ["material"],
-      },
-      {
-        text: "Red Book",
-        icon: "mdi:api",
-        collapsed: false,
-        prefix: "red_book",
-        items: ["red_book"],
-      },
+      text: "Font-End Frameworks",
+      icon: "material-symbols:dashboard-customize-outline-rounded",
+      collapsed: false,
+      prefix: "material/font-end",
+      items: [
+        {
+          text: "Three-js",
+          icon: "mdi:api",
+          collapsed: false,
+          prefix: "three-js",
+          items: ["basic", "operation"],
+        },
+      ],
+    },
+    {
+      text: "Red Book",
+      icon: "mdi:api",
+      collapsed: false,
+      prefix: "red_book",
+      items: ["red_book"],
+    },
     {
       text: "Coding",
       prefix: "coding",
@@ -128,6 +136,5 @@ export const themeGuide = defineNoteConfig({
         },
       ],
     },
-    
   ],
 });

@@ -20,22 +20,36 @@ Phoat is the combined nickname of Little Chubby and Little Pot. This website ser
 
 ## Blog Content
 
+::: tip
 The blog is currently divided into the following sections, where you can find the information you need based on your interests.
+:::
 
 ### Visa-related Information
 
-**US visa**
+#### US visa
 
 - [Renew F1 visa in Mexico](./visa/usvisa/mexico.md)
 
-**Mexico visa**
+#### Mexico visa
 
 - [Visitor visa](./visa/mexicovisa/mexico_visa.md)
 
+---
+
 ### Job-related Information
+
+- [Technical Materials](./material/material.md)
 
 - [Coding](./coding/intro.md)
 
-<!--  [威联通 nas](./nas.md)
+---
 
-[小红书相关](red_book.md) -->
+### NAS
+
+- [QNAP NAS](./nas.md)
+
+---
+
+### Little Red Book
+
+- [Red Book](red_book.md)

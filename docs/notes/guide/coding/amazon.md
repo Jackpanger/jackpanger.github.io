@@ -4,6 +4,10 @@ createTime: 2024/10/12 09:54:42
 permalink: /guide/coding/amazon/
 ---
 
+## General Link
+
+[General link](https://docs.qq.com/doc/DWE5IcFN4U0N1VUtT?_t=1728571584939&u=7fb162d9b76448ef8b03149261d381ef)
+
 ## Question 1
 
 ::: note Question
