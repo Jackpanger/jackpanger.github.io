@@ -126,7 +126,11 @@ let eventObject = {
 const gui = new GUI();
 gui.add(eventObject, "Fullscreen").name("Full Screen");
 gui.add(eventObject, "ExitFullscreen").name("Exit Full Screen");
+```
 
+GUI can also be used to control the attributes:
+
+```js
 // control position of the cube
 let folder = gui.addFolder("Cube");
 folder
@@ -161,3 +165,5 @@ gui
     cube.material.color.set(value);
   });
 ```
+
+<img src = "/images/material/font-end/three-js/GUI pannel.png" alt="Vector Scale" width ="500px">
