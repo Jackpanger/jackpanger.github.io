@@ -41,6 +41,7 @@ const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
 const parentMaterial = new THREE.MeshBasicMaterial({ color: 0xff0000 });
 const cube = new THREE.Mesh(geometry, material);
 let parentCube = new THREE.Mesh(geometry, parentMaterial);
+parentMaterial.wireframe = true;
 parentCube.add(cube);
 scene.add(parentCube);
 parentCube.position.x = -3;
@@ -81,9 +82,10 @@ window.addEventListener("resize", () => {
 });
 ```
 
-Click to enter and exit to full screen:
+Click to enter and exit full screen:
 
 ```js
+// enter
 var btn = document.createElement("button");
 btn.innerHTML = "click me full screen";
 btn.style.position = "absolute";
@@ -91,7 +93,71 @@ btn.style.top = "10px";
 btn.style.left = "10px";
 btn.style.zIndex = "999";
 btn.onclick = () => {
-  renderer.domElement.requestFullscreen();
+  document.body.requestFullscreen();
 };
 document.body.appendChild(btn);
+
+// exit
+var exitBtn = document.createElement("button");
+exitBtn.innerHTML = "click me to exit full screen";
+exitBtn.style.position = "absolute";
+exitBtn.style.top = "10px";
+exitBtn.style.left = "100px";
+exitBtn.style.zIndex = "999";
+exitBtn.onclick = () => {
+  document.exitFullscreen();
+};
+document.body.appendChild(exitBtn);
+```
+
+Use GUI to do this:
+
+```js
+import { GUI } from "three/examples/jsm/libs/lil-gui.module.min.js";
+let eventObject = {
+  Fullscreen: () => {
+    document.body.requestFullscreen();
+  },
+  ExitFullscreen: () => {
+    document.exitFullscreen();
+  },
+};
+
+const gui = new GUI();
+gui.add(eventObject, "Fullscreen").name("Full Screen");
+gui.add(eventObject, "ExitFullscreen").name("Exit Full Screen");
+
+// control position of the cube
+let folder = gui.addFolder("Cube");
+folder
+  .add(cube.position, "x")
+  .min(-10)
+  .max(10)
+  .step(1)
+  .name("Cube X")
+  .onChange((value) => {
+    console.log(value);
+  });
+folder
+  .add(cube.position, "y")
+  .min(-10)
+  .max(10)
+  .step(1)
+  .name("Cube Y")
+  .onFinishChange((value) => {
+    console.log(value);
+  });
+// change boolean value of wireframe
+gui.add(parentMaterial, "wireframe").name("Wireframe");
+
+// change color of material
+let colorParams = {
+  color: "#00ff00",
+};
+gui
+  .addColor(colorParams, "color")
+  .name("Cube Color")
+  .onChange((value) => {
+    cube.material.color.set(value);
+  });
 ```
