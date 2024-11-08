@@ -44,6 +44,12 @@ The blog is currently divided into the following sections, where you can find th
 
 ---
 
+### Technical Materials
+
+- [Technical Materials](./material/material.md)
+
+---
+
 ### NAS
 
 - [QNAP NAS](./nas.md)

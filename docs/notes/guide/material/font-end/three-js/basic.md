@@ -152,7 +152,26 @@ if (WebGL.isWebGL2Available()) {
   :::
   By default, when we call `scene.add()`, the thing we add will be added to the coordinates `(0,0,0)`. This would cause both the camera and the cube to be inside each other. To avoid this, we simply move the camera out a bit.
   :::details requestAnimationFrame
-  Perhaps the most important advantage compared to `setInterval` is that it pauses when the user navigates to another browser tab, hence not wasting their precious processing power and battery life.
+  Perhaps the most important advantage compared to `setInterval` is that it pauses when the user navigates to another browser tab, hence not wasting their precious processing power and battery life. But here we use `setAnimationLoop`.
+
+  ```js
+     /**
+     * A build in function that can be used instead of requestAnimationFrame. For WebXR projects this function must be used.
+     * @param callback The function will be called every available frame. If `null` is passed it will stop any already ongoing animation.
+     */
+    setAnimationLoop(callback: XRFrameRequestCallback | null): void;
+  ```
+
+  Or if you want `requestAnimationFrame` version:
+
+  ```js
+  function animate() {
+    requestAnimationFrame(animate);
+    renderer.render(scene, camera);
+  }
+  animate();
+  ```
+
   :::
 
 - index.html
@@ -236,6 +255,8 @@ The troika-three-text package renders quality antialiased text using a similar t
 ## Drawing Lines
 
 ```js
+// Anti-Aliasing
+// const renderer = new THREE.WebGLRenderer({ antialias: true });
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
@@ -301,9 +322,9 @@ Where possible, we recommend using glTF (GL Transmission Format). Both .GLB and 
 
 ```js
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
-const loader = new GLTFLoader();
+const gltfLoader = new GLTFLoader();
 
-loader.load(
+gltfLoader.load(
   "path/to/model.glb",
   function (gltf) {
     scene.add(gltf.scene);
@@ -311,6 +332,49 @@ loader.load(
   undefined,
   function (error) {
     console.error(error);
+  }
+);
+```
+
+Sometimes the model is compressed so we need to decompress it before using it.
+
+```js
+import { DRACOLoader } from "three/addons/loaders/DRACOLoader.js";
+const loader = new DRACOLoader();
+loader.setDecoderPath("/examples/jsm/libs/draco/");
+gltfLoader.setDRACOLoader(loader);
+```
+
+Or
+
+```js
+import { DRACOLoader } from "three/addons/loaders/DRACOLoader.js";
+// Instantiate a loader
+const loader = new DRACOLoader();
+
+// Specify path to a folder containing WASM/JS decoding libraries.
+loader.setDecoderPath("/examples/jsm/libs/draco/");
+
+// Optional: Pre-fetch Draco WASM/JS module.
+loader.preload();
+
+// Load a Draco geometry
+loader.load(
+  // resource URL
+  "model.drc",
+  // called when the resource is loaded
+  function (geometry) {
+    const material = new THREE.MeshStandardMaterial({ color: 0x606060 });
+    const mesh = new THREE.Mesh(geometry, material);
+    scene.add(mesh);
+  },
+  // called as loading progresses
+  function (xhr) {
+    console.log((xhr.loaded / xhr.total) * 100 + "% loaded");
+  },
+  // called when loading has errors
+  function (error) {
+    console.log("An error happened");
   }
 );
 ```

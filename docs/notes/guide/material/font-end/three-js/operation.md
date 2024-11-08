@@ -50,7 +50,7 @@ cube.position.set(3, 0, 0);
 
 <img src = "/images/material/font-end/three-js/vector-position.png" alt="Vector Position" width ="500px">
 
-### Scale
+### Scale(set)
 
 ```js
 cube.scale.set(2, 2, 3);
@@ -71,6 +71,10 @@ This is based on Euler angles. 'XYZ' indicates the order of applying rotations: 
 ```js
 new THREE.Vector3(1, 1, 1).applyEuler(new THREE.Euler(0, 0, 0, "XYZ"));
 ```
+
+### Transition/Rotation/Scale (Vertex Transformation)
+
+These modify the vertices of the objects, affecting the operations above. We usually recommend operating on objects based at the origin rather than changing the position of the objects. However, you can also transition objects that are not at the origin and then perform the operations mentioned above, which may make it easier to manipulate the objects.
 
 ## Adapt to Screen Resize
 
