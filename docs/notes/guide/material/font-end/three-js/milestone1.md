@@ -21,6 +21,7 @@ import "./App.css";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { RGBELoader } from "three/examples/jsm/Addons.js";
 import { DRACOLoader } from "three/addons/loaders/DRACOLoader.js";
+import { GUI } from "three/examples/jsm/libs/lil-gui.module.min.js";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import TWEEN from "three/examples/jsm/libs/tween.module.js";
 import { Water } from "three/examples/jsm/objects/Water2.js";
@@ -29,11 +30,10 @@ import { transitionCamera } from "./utils/cameraUtils";
 import { getHandlerWheel } from "./utils/index";
 import { useRef } from "react";
 import { getScreenResize } from "./utils/listenerUtils/screenResize";
+import { createHeart } from "./models/heart";
 function App() {
-  // const currentScene = useRef(0);
   const [currentScene, setCurrentScene] = useState(0);
   const isAnimating = useRef(false);
-  // const scenesRef = useRef<Scene[]>([]);
   const [scenesRef, setScenesRef] = useState<Scene[]>([]);
 
   useEffect(() => {
@@ -129,6 +129,11 @@ function App() {
     plane.receiveShadow = true;
     scene.add(plane);
 
+    // create heart animation
+    const { starInstance, createHeartAnimation, reverseHeartAnimation } =
+      createHeart();
+    scene.add(starInstance);
+
     // set water background
     const waterGeometry = new THREE.CircleGeometry(2, 32);
     const water = new Water(waterGeometry, {
@@ -149,9 +154,10 @@ function App() {
           transitionCamera(
             camera,
             controls,
-            new THREE.Vector3(2, 3, 2),
+            new THREE.Vector3(0, 0, 5),
             new THREE.Vector3(0, 0, 0)
           );
+          createHeartAnimation();
         },
       },
       {
@@ -163,6 +169,7 @@ function App() {
             new THREE.Vector3(-2, 1, 2),
             new THREE.Vector3(3, 1, 1)
           );
+          reverseHeartAnimation();
         },
       },
     ];
@@ -226,6 +233,108 @@ const [scenesRef, setScenesRef] = useState<Scene[]>([]);
 
 scenesRef is an array that stores the scenes. currentScene is the index of the current scene.
 Since scenes array is used in the dom, we use useState to manage it to trigger the re-render of the dom. Same as the currentScene. When we change the currentScene, the dom will be re-rendered to switch the scene and translate the scene text.
+
+```ts :collapsed-lines=10
+import * as THREE from "three";
+
+import TWEEN from "three/examples/jsm/libs/tween.module.js";
+export function createHeart(
+  starInstance: THREE.InstancedMesh = new THREE.InstancedMesh(
+    new THREE.SphereGeometry(0.1, 32, 32),
+    new THREE.MeshStandardMaterial({
+      color: 0xffffff,
+      emissive: 0xffffff,
+      emissiveIntensity: 10,
+    }),
+    100
+  ),
+  scale: number = 0.05,
+  center: THREE.Vector3 = new THREE.Vector3(0, 0, 0)
+) {
+  const size = starInstance.count;
+  const starsArray: THREE.Vector3[] = [];
+  const endArray: THREE.Vector3[] = [];
+  for (let i = 0; i < size; i++) {
+    const x = Math.random() * size - size / 2;
+    const y = Math.random() * size - size / 2;
+    const z = Math.random() * size - size / 2;
+    starsArray.push(new THREE.Vector3(x, y, z));
+    const matrix = new THREE.Matrix4();
+    matrix.setPosition(x, y, z);
+    starInstance.setMatrixAt(i, matrix);
+  }
+  // heart path
+  const heartShape = new THREE.Shape();
+  heartShape.moveTo(0, -22.5);
+  heartShape.bezierCurveTo(0, -22.5, -5, -47.5, -25, -47.5);
+  heartShape.bezierCurveTo(-55, -47.5, -55, -12.5, -55, -12.5);
+  heartShape.bezierCurveTo(-55, 7.5, -35, 29.5, 0, 47.5);
+  heartShape.bezierCurveTo(35, 29.5, 55, 7.5, 55, -12.5);
+  heartShape.bezierCurveTo(55, -12.5, 55, -47.5, 25, -47.5);
+  heartShape.bezierCurveTo(10, -47.5, 0, -22.5, 0, -22.5);
+  for (let i = 0; i < size; i++) {
+    const point = heartShape.getPoint(i / 100);
+    endArray.push(
+      new THREE.Vector3(
+        point.x * scale + center.x,
+        point.y * scale + center.y,
+        center.z
+      )
+    );
+  }
+  function createHeartAnimation() {
+    new TWEEN.Tween({ time: 0 })
+      .to({ time: 1 }, 1000)
+      .easing(TWEEN.Easing.Quadratic.InOut)
+      .onUpdate((obj) => {
+        for (let i = 0; i < 100; i++) {
+          const x =
+            starsArray[i].x + (endArray[i].x - starsArray[i].x) * obj.time;
+          const y =
+            starsArray[i].y + (endArray[i].y - starsArray[i].y) * obj.time;
+          const z =
+            starsArray[i].z + (endArray[i].z - starsArray[i].z) * obj.time;
+          const matrix = new THREE.Matrix4();
+          matrix.setPosition(x, y, z);
+          starInstance.setMatrixAt(i, matrix);
+        }
+        starInstance.instanceMatrix.needsUpdate = true;
+      })
+      .start();
+  }
+  function reverseHeartAnimation() {
+    new TWEEN.Tween({ time: 0 })
+      .to({ time: 1 }, 1000)
+      .easing(TWEEN.Easing.Quadratic.InOut)
+      .onUpdate((obj) => {
+        for (let i = 0; i < 100; i++) {
+          const x =
+            endArray[i].x + (starsArray[i].x - endArray[i].x) * obj.time;
+          const y =
+            endArray[i].y + (starsArray[i].y - endArray[i].y) * obj.time;
+          const z =
+            endArray[i].z + (starsArray[i].z - endArray[i].z) * obj.time;
+          const matrix = new THREE.Matrix4();
+          matrix.setPosition(x, y, z);
+          starInstance.setMatrixAt(i, matrix);
+        }
+        starInstance.instanceMatrix.needsUpdate = true;
+      })
+      .start();
+  }
+
+  return {
+    starInstance,
+    starsArray,
+    endArray,
+    createHeartAnimation,
+    reverseHeartAnimation,
+  };
+}
+```
+
+The general idea of the `createHeart` function is to create a star instance and use the tween library to animate the star instance.
+The shape of the heart is defined by the `heartShape.getPoint` function from a predefined cubic bezier curve.
 
 ## 2. Define the listener functions
 
@@ -298,4 +407,4 @@ This function is used to handle the mouse wheel event. When the user scrolls the
 
 ## 3. Display the final demo
 
-<img src="/images/material/font-end/three-js/milestone1-demo.gif" alt="Milestone 1 Demo " width = "500px">
+<img src="/images/material/font-end/three-js/milestone1-demo.gif" alt="Milestone 1 Demo " >
