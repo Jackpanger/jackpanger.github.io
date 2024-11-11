@@ -407,7 +407,9 @@ This function is used to handle the mouse wheel event. When the user scrolls the
 
 ## 3. Display the final demo
 
-<div id="imageContainer">
+![Milestone 1 Demo](/images/material/font-end/three-js/milestone1-demo.gif)
+
+<!-- <div id="imageContainer">
   <div id="loader">Loading...</div>
   <img id="myGif" src="/images/material/font-end/three-js/milestone1-demo.gif" alt="Milestone 1 Demo" style="display: none;">
-</div>
+</div> -->
