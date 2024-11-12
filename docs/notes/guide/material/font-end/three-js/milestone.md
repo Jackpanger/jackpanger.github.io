@@ -1,5 +1,5 @@
 ---
-title: First Milestone
+title: Milestone
 createTime: 2024/11/08 16:27:16
 permalink: /guide/guide/materials/font-end/three-js/milestone1/
 tags:
@@ -7,7 +7,7 @@ tags:
   - Milestone
 ---
 
-Congratulations! You have completed the first milestone of the Three-js tutorial.
+Congratulations! You have completed the Three-js tutorial.
 Now you can combine the knowledge you have learned to create your own 3D scene with smooth camera movement.
 
 ## 1. Create all the models and bind the mouse event
@@ -51,7 +51,11 @@ function App() {
     camera.position.x = 1;
 
     // renderer
-    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    const renderer = new THREE.WebGLRenderer({
+      antialias: true,
+      // avoid frame flicking
+      logarithmicDepthBuffer: true,
+    });
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setAnimationLoop(animate);
     renderer.shadowMap.enabled = true;
