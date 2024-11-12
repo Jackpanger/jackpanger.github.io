@@ -74,4 +74,4 @@ ok | 1 passed | 0 failed (3ms)
 
 In the Extensions tab, search for "Deno" and install the extension by Denoland.
 
-Next, open the Command Palette by pressing Ctrl+Shift+P and type Deno: Initialize Workspace Configuration. Select this option to configure Deno for your workspace.
+Next, open the Command Palette by pressing `Ctrl+Shift+P` and type `Deno: Initialize Workspace Configuration`. Select this option to configure Deno for your workspace.
