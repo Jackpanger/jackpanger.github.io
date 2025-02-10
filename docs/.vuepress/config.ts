@@ -5,6 +5,15 @@ import { plumeTheme } from "vuepress-theme-plume";
 export default defineUserConfig({
   base: "/",
   lang: "zh-CN",
+  head: [
+    [
+      "meta",
+      {
+        name: "google-site-verification",
+        content: "lbaL6XzmRGZtxpg43PuG0_pmnp7QYfiqJnsu5fkGMvg",
+      },
+    ],
+  ],
   locales: {
     "/": {
       title: "Phoat",

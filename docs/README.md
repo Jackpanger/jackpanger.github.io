@@ -49,5 +49,3 @@ config:
   - type: blog
   - type: custom
 ---
-
-<meta name="google-site-verification" content="lbaL6XzmRGZtxpg43PuG0_pmnp7QYfiqJnsu5fkGMvg" />
