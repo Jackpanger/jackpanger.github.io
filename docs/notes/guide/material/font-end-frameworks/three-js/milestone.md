@@ -1,7 +1,7 @@
 ---
 title: Milestone
 createTime: 2024/11/08 16:27:16
-permalink: /guide/guide/materials/font-end/three-js/milestone1/
+permalink: /guide/materials/font-end-frameworks/three-js/milestone1/
 tags:
   - Three-js
   - Milestone

@@ -1,7 +1,7 @@
 ---
 title: Quick Start
 createTime: 2024/11/12 14:35:05
-permalink: /guide//guide/materials/font-end/deno/quick-start/
+permalink: /guide/materials/font-end-frameworks/deno/quick-start/
 tags:
   - Deno
   - Quick Start

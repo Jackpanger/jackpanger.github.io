@@ -1,7 +1,7 @@
 ---
 title: Materials
 createTime: 2024/11/05 00:51:36
-permalink: /guide/guide/materials/font-end/three-js/materials/
+permalink: /guide/materials/font-end-frameworks/three-js/materials/
 tags:
   - three.js
   - materials

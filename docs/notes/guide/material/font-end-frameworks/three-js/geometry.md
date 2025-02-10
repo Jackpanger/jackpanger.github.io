@@ -1,7 +1,7 @@
 ---
 title: Geometry
 createTime: 2024/11/04 22:27:18
-permalink: /guide/materials/font-end/three-js/geometry/
+permalink: /guide/materials/font-end-frameworks/three-js/geometry/
 tags:
   - three.js
   - geometry

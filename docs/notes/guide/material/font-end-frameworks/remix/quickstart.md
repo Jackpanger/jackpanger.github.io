@@ -1,7 +1,7 @@
 ---
 title: Quick Start
 createTime: 2024/11/12 14:35:05
-permalink: /guide//guide/materials/font-end/remix/quick-start/
+permalink: /guide/materials/font-end-frameworks/remix/quick-start/
 tags:
   - Remix
   - Quick Start

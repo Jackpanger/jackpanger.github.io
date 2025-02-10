@@ -81,13 +81,20 @@ export const themeGuide = defineNoteConfig({
       icon: "lucide:box",
       collapsed: false,
       prefix: "nas",
-      items: ["nas", "ddns-go"],
+      items: ["nas", "ddns-go", "movie"],
+    },
+    {
+      text: "Front-end Engineering",
+      icon: "carbon:idea",
+      collapsed: false,
+      prefix: "material/font-end-engineering",
+      items: ["basic"],
     },
     {
       text: "Font-End Frameworks",
       icon: "material-symbols:dashboard-customize-outline-rounded",
       collapsed: false,
-      prefix: "material/font-end",
+      prefix: "material/font-end-frameworks",
       items: [
         {
           text: "Three-js",

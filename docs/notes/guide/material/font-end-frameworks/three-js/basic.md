@@ -1,7 +1,7 @@
 ---
 title: Basic
 createTime: 2024/11/04 16:25:05
-permalink: /guide/materials/font-end/three-js/basic/
+permalink: /guide/materials/font-end-frameworks/three-js/basic/
 tags:
   - three.js
   - basic

@@ -1,7 +1,7 @@
 ---
 title: Simple Operations
 createTime: 2024/11/04 21:06:26
-permalink: /guide/materials/font-end/three-js/operation/
+permalink: /guide/materials/font-end-frameworks/three-js/operation/
 ---
 
 ## AxesHelper

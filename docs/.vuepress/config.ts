@@ -55,7 +55,15 @@ export default defineUserConfig({
        */
       shiki: {
         // languages: ['shell', 'bash', 'typescript', 'javascript'],
-        languages: ["java", "shell", "html", "css", "typescript", "javascript"],
+        languages: [
+          "java",
+          "shell",
+          "html",
+          "css",
+          "typescript",
+          "javascript",
+          "yml",
+        ],
 
         //   twoslash: true,
       },

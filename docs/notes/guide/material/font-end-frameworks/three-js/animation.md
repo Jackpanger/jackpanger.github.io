@@ -1,7 +1,7 @@
 ---
 title: Animation
 createTime: 2024/11/05 15:50:09
-permalink: /guide//guide/materials/font-end/three-js/animation/
+permalink: /guide/materials/font-end-frameworks/three-js/animation/
 ---
 
 ## Tween

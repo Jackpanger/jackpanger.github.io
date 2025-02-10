@@ -1,7 +1,7 @@
 ---
 title: Light
 createTime: 2024/11/05 02:56:04
-permalink: /guide/materials/font-end/three-js/light/
+permalink: /guide/materials/font-end-frameworks/three-js/light/
 tags:
   - three.js
   - light
